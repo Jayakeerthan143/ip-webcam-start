@@ -12,7 +12,7 @@
     <script>
         document.getElementById("start-btn").addEventListener("click", function() {
             let ip = "192.0.0.4";  // ⚠️ CHANGE THIS TO YOUR PHONE'S IP
-            let url = `http://${ip}:8080/startvideo`;
+            let url = `http://${ip}:8080/start`;
 
             fetch(url)
                 .then(response => {
