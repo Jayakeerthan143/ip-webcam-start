@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start IP Webcam</title>
+</head>
+<body>
+    <h1>Start IP Webcam</h1>
+    <button id="start-btn">Start Camera</button>
+
+    <script>
+        document.getElementById("start-btn").addEventListener("click", function() {
+            window.location.href = "intent://start#Intent;scheme=ipwebcam;package=com.pas.webcam;end;";
+        });
+    </script>
+</body>
+</html>
