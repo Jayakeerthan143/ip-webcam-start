@@ -10,10 +10,22 @@
     <button id="start-btn">Start Camera</button>
 
     <script>
-       document.getElementById("start-btn").addEventListener("click", function() {
-    window.location.href = "intent://start#Intent;action=android.intent.action.VIEW;category=android.intent.category.DEFAULT;package=com.pas.webcam;end;";
-});
+        document.getElementById("start-btn").addEventListener("click", function() {
+            let ip = "192.0.0.4";  // ⚠️ CHANGE THIS TO YOUR PHONE'S IP
+            let url = `http://${ip}:8080/startvideo`;
 
+            fetch(url)
+                .then(response => {
+                    if (response.ok) {
+                        alert("IP Webcam Started!");
+                    } else {
+                        alert("Failed to start IP Webcam. Check if the app is running.");
+                    }
+                })
+                .catch(error => {
+                    alert("Error: Could not connect to IP Webcam. Make sure your phone and this device are on the same Wi-Fi network.");
+                });
+        });
     </script>
 </body>
 </html>
