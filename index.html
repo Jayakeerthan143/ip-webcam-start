@@ -7,25 +7,12 @@
 </head>
 <body>
     <h1>Start IP Webcam</h1>
-    <button id="start-btn">Start Camera</button>
+    <button onclick="startIPWebcam()">Start Camera</button>
 
     <script>
-        document.getElementById("start-btn").addEventListener("click", function() {
-            let ip = "192.0.0.4";  // ⚠️ CHANGE THIS TO YOUR PHONE'S IP
-            let url = `http://${ip}:8080/start`;
-
-            fetch(url)
-                .then(response => {
-                    if (response.ok) {
-                        alert("IP Webcam Started!");
-                    } else {
-                        alert("Failed to start IP Webcam. Check if the app is running.");
-                    }
-                })
-                .catch(error => {
-                    alert("Error: Could not connect to IP Webcam. Make sure your phone and this device are on the same Wi-Fi network.");
-                });
-        });
+        function startIPWebcam() {
+            window.location.href = "intent://start#Intent;package=com.pas.webcam;end;";
+        }
     </script>
 </body>
 </html>
