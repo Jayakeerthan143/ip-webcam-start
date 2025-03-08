@@ -10,9 +10,10 @@
     <button id="start-btn">Start Camera</button>
 
     <script>
-        document.getElementById("start-btn").addEventListener("click", function() {
-            window.location.href = "intent://start#Intent;scheme=ipwebcam;package=com.pas.webcam;end;";
-        });
+       document.getElementById("start-btn").addEventListener("click", function() {
+    window.location.href = "intent://start#Intent;action=android.intent.action.VIEW;category=android.intent.category.DEFAULT;package=com.pas.webcam;end;";
+});
+
     </script>
 </body>
 </html>
