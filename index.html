@@ -11,7 +11,13 @@
 
     <script>
         function startIPWebcam() {
+            // Launch IP Webcam on the phone
             window.location.href = "intent://start#Intent;package=com.pas.webcam;end;";
+
+            // Wait for 5 seconds and then open the live feed (change IP if needed)
+            setTimeout(() => {
+                window.open("http://192.168.1.100:8080/videofeed", "_blank");
+            }, 5000);
         }
     </script>
 </body>
